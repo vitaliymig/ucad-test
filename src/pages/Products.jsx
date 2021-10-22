@@ -1,0 +1,22 @@
+import { useEffect, useState } from "react";
+import Card from "../components/Card";
+
+export default function Products() {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    fetch("https://api.thedogapi.com/v1/breeds")
+      .then((res) => res.json())
+      .then((data) => setProducts(data));
+  }, []);
+
+  return (
+    <>
+      <h1>Product page</h1>
+      <div className="products">
+        {products.map((product) => (
+          <Card product={product} key={product.id} />
+        ))}
+      </div>
+    </>
+  );
+}
