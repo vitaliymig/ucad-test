@@ -4,8 +4,8 @@ export default function Card({ product }) {
     <div className="card">
       <img
         className="card__product-img"
-        width="200"
-        hight="200"
+        width="300"
+        hight="300"
         loading="lazy"
         decoding="async"
         src={product.image?.url}

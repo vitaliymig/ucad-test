@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import "swiper/swiper.min.css";
-import "swiper/components/navigation/navigation.min.css";
+import "slick-carousel/slick/slick.css";
+import Slider from "react-slick";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -16,13 +14,11 @@ export default function Home() {
   return (
     <>
       <h1 className="home__title">Home page</h1>
-      <Swiper spaceBetween={50} slidesPerView={3} navigation>
+      <Slider slidesToShow={3}>
         {products.map((product) => (
-          <SwiperSlide>
-            <Card product={product} key={product.id} />
-          </SwiperSlide>
+          <Card product={product} key={product.id} />
         ))}
-      </Swiper>
+      </Slider>
     </>
   );
 }

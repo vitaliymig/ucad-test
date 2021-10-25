@@ -4,12 +4,12 @@ import logo from "../img/UKAD_logo.svg";
 export default function Header() {
   return (
     <header className="header">
-      <div className="container">
-        <nav className="navbar">
+      <div className="container-wide">
+        <nav className="navbar display-flex">
           <Link className="logo" to="/">
             <img src={logo} alt="UKAD" />
           </Link>
-          <ul className="navabar__nav">
+          <ul className="navabar__nav display-flex">
             <li>
               <Link to="/">Home</Link>
             </li>

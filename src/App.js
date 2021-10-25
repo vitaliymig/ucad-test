@@ -10,7 +10,7 @@ function App() {
     <>
       <Header />
       <main>
-        <div className="container">
+        <div className="container-short">
           <Switch>
             <Route exact path="/">
               <Home></Home>
