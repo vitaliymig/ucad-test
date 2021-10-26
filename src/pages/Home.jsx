@@ -13,12 +13,14 @@ export default function Home() {
 
   return (
     <>
-      <h1 className="home__title">Home page</h1>
-      <Slider slidesToShow={3}>
-        {products.map((product) => (
-          <Card product={product} key={product.id} />
-        ))}
-      </Slider>
+      <div className="container-short">
+        <h1 className="title">Home page</h1>
+        <Slider slidesToShow={3}>
+          {products.map((product) => (
+            <Card product={product} key={product.id} slide />
+          ))}
+        </Slider>
+      </div>
     </>
   );
 }

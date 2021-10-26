@@ -1,11 +1,14 @@
-export default function Card({ product }) {
-  console.log(product);
+export default function Card({ product, slide, showcase }) {
   return (
-    <div className="card">
+    <div
+      className={`card ${showcase ? "card__showcase" : ""} ${
+        slide ? "card__slide" : ""
+      }`}
+    >
       <img
         className="card__product-img"
-        width="300"
-        hight="300"
+        width="1"
+        hight="1"
         loading="lazy"
         decoding="async"
         src={product.image?.url}
@@ -16,14 +19,3 @@ export default function Card({ product }) {
     </div>
   );
 }
-
-// bred_for: "Hunting bears"
-// breed_group: "Working"
-// height: {imperial: '24 - 28', metric: '61 - 71'}
-// id: 6
-// image: {id: 'BFRYBufpm', width: 1280, height: 853, url: 'https://cdn2.thedogapi.com/images/BFRYBufpm.jpg'}
-// life_span: "10 - 14 years"
-// name: "Akita"
-// reference_image_id: "BFRYBufpm"
-// temperament: "Docile, Alert, Responsive, Dignified, Composed, Friendly, Receptive, Faithful, Courageous"
-// weight: {imperial: '65 - 115', metric: '29 - 52'}

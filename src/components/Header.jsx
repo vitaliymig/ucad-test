@@ -6,7 +6,7 @@ export default function Header() {
     <header className="header">
       <div className="container-wide">
         <nav className="navbar display-flex">
-          <Link className="logo" to="/">
+          <Link className="navbar__logo" to="/">
             <img src={logo} alt="UKAD" />
           </Link>
           <ul className="navabar__nav display-flex">
