@@ -8,17 +8,15 @@ function App() {
   return (
     <>
       <Header />
-      <main>
-        <div className="">
-          <Switch>
-            <Route exact path="/">
-              <Home></Home>
-            </Route>
-            <Route exact path="/products">
-              <Products></Products>
-            </Route>
-          </Switch>
-        </div>
+      <main className="main">
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route exact path="/products">
+            <Products></Products>
+          </Route>
+        </Switch>
       </main>
       <Footer />
     </>

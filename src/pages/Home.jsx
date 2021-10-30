@@ -10,12 +10,36 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
+  const sliderSettings = {
+    slidesToShow: 3,
+    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
       <div className="container-short">
-        <h1 className="title">Home page</h1>
-        <Slider slidesToShow={3}>
+        <h1 className="title title-home">Home page</h1>
+        <Slider {...sliderSettings}>
           {products.map((product) => (
             <Card product={product} key={product.id} slide />
           ))}
